@@ -5,11 +5,15 @@ if want to change an them must be redifined
 '''
 
 x = ("cats", "dogs", "rats")
-print("I m x: ",x)
 
-y = ("wolves", "lions", "elephants")
-print(y)
+# acess items in a tuble 
+print(x[0])
 
-x=y
-print("I m x after mutatuion: ",x)
+# update tuple or remove cant be done unmutable
+# neesds to be redifined
+y = list(x)
+y.pop(0)
+print("after redfine and remove in tuple", y)
+
+
 
