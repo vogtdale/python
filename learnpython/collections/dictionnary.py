@@ -1,5 +1,5 @@
 #Dictionaries are used to store data values in key:value pairs.
-# A dictionary is a collection which is unordered, changeable and does not allow duplicates.
+# A dictionary is a collection which is ordered, changeable and does not allow duplicates.
 # Dictionaries are written with curly brackets, and have keys and values:
 # When we say that dictionaries are unordered, it means that the items does not have a defined order, you cannot refer to an item by using an index
 
