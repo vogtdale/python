@@ -1,11 +1,10 @@
 def isPalidrome(x):
-    temp = str(x)
+    y = str(abs(x))
+    temp = int(y[::-1])
 
-    rev = str(temp[::-1])
-
-    if x == rev:
+    if x == temp:
         return True
     else:
         return False
-
-print(isPalidrome("racecar"))
+    
+print(isPalidrome(121))
