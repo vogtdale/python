@@ -8,6 +8,7 @@ library. We implement the concept of linked lists
 using the concept of nodes
 '''
 
+
 class Node:
     def __init__(self, dataval=None):
         self.dataval = dataval
@@ -16,6 +17,13 @@ class Node:
 class SLinkedList:
     def __init__(self):
         self.headval = None
+
+    def printList(self):
+        print_val = self.headval
+        while print_val is not None:
+            print(print_val.dataval)
+            print_val = print_val.nextval
+
 
 list1 = SLinkedList()
 list1.headval = Node("Mon")
@@ -26,4 +34,11 @@ list1.headval.nextval = e2
 
 # Link second Node to third node
 e2.nextval = e3
-print(list1.headval)
+
+
+list1.printList()
+
+
+
+
+

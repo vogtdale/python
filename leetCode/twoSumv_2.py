@@ -4,7 +4,6 @@ return indices of the two numbers such that they add up to target.
 
 '''
 
-
 def twoSum(arr, target):  # returns a list
     h={}
 
@@ -20,3 +19,6 @@ l = [2,4,5,7]
 target = 7
 
 print(twoSum(l, target))
+
+
+
