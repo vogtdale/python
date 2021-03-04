@@ -1,16 +1,15 @@
-def removeElement(nums, val):
-    temp = len(nums)
+def searchPosition(arr, target):
 
-    i = 0
+    if target in arr:
+        return arr.index(target)
 
-    while temp > i:
-        if nums[i] == val:
-            del nums[i]
-            temp -= 1
-        else:
-            i += 1
-    return nums
+    else:
+        for i in range(len(arr)):
+            if arr[i] > target:
+                return i
+        return arr
 
-arr = [1,2,3,4,5,4]
-val = 4
-print(removeElement(arr, val))
+
+l = [1,2,3,4,5,6]
+t= 4
+print(searchPosition(l,t))
