@@ -4,34 +4,65 @@ basicly two ptr* solution
 '''
 
 # Definition for singly-linked list.
-class ListNode(object):
-    def __init__(self, val=0, next=None):
+class Node:
+    def __init__(self, val = None):
         self.val = val
-        self.next = next
-    
-    def mergeSortedList(self, l1, l2):
-        dummy = ListNode()
+        self.next = None
 
-        while l1 and l2: # none null
-            if l1.val < l2.val:
-                dummy.next = l1
-                l1 = l1.next
+class linkedList:
+    def __init__(self):
+        self.head = None
 
-            else:
-                dummy.next = l2
-                l2 = l2.next
-            dummy = dummy.next
+    def printList(self):
+        temp_val = self.head
+        while temp_val is not None:
+            print(temp_val.val) 
+            temp_val = temp_val.next
+        
+    def addTolist(self, newData):
+        newNode = Node(newData)
 
-        # add elemnts of still remaing list
-        if l1: dummy.next = l1
-        if l2: dummy.next = l2
+        if self.head is None:
+            self.head = newNode
+            return
+        last = self.head
+        while last.next:
+            last = last.next
 
-        return dummy.next # which is the head
+        last.next = newNode
+
+def mergeList(l1,l2):
+    dummy = Node()
+    tail = dummy
+    while l1 and l2:
+        if l1.val < l2.val:
+            tail.next = l1
+            l1 = l1.next
+        else:
+            tail.next = l2
+            l2= l2.next
+
+        tail = tail.next
+
+    if l1: tail.next = l1
+    if l2: tail.next = l2
+
+    return dummy.next
 
 
-l1 = [1,2,3,4]
-l2 = [2,4,5,6]
 
-obj = ListNode()
-print(obj.mergeSortedList(l1,l2))
+lA = linkedList()
+lB = linkedList()
+
+lA.addTolist(1)
+lA.addTolist(4)
+lA.addTolist(5)
+
+lB.addTolist(2)
+lB.addTolist(3)
+lB.addTolist(6)
+
+lA.head = mergeList(lA.head, lB.head)
+
+lA.printList()
 
