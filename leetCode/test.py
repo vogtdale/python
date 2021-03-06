@@ -1,16 +1,15 @@
-def searchPstition(arr, target):
-    position=0
+def removeElements(arr, val):
+    length = len(arr)
+    i = 0
 
-    for i in range(len(arr)):
-        if arr[i] == target:
-            return i
+    while length > i:
+        if arr[i] == val:
+            del arr[i]
+            length -= 1
         else:
-            if target < arr[i]:
-                return i
-            else:
-                position = i + 1
-    return position
+            i += 1
+    return arr
 
 l=[1,2,3,4,5,6,7]
 t=4
-print(searchPstition(l,t))
+print(removeElements(l,t))
