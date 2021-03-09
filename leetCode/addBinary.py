@@ -20,6 +20,27 @@ def addBinary(a,b):
         result = "1" + result
     return result
 
+
+    """
+    result = ""
+    carry = 0
+
+    a = list(a)
+    b = list(b)
+
+    while a or b or carry == 1:
+        if a:
+            carry += int(a.pop())
+
+        if b: 
+            carry += int(b.pop())
+        
+        result += str(carry % 2)
+        carry = carry // 2
+    
+    return result[::-1]
+    """
+
 a="11"
 b="1"
 print(addBinary(a,b))

@@ -1,15 +1,13 @@
-def removeElements(arr, val):
-    length = len(arr)
-    i = 0
+def sqrt(x):
+    low = 0
+    high = x
 
-    while length > i:
-        if arr[i] == val:
-            del arr[i]
-            length -= 1
+    while low < high:
+        mid = (low+high) // 2
+        mid_sqrt = mid * mid
+
+        if mid_sqrt <= x:
+            low = mid + 1
         else:
-            i += 1
-    return arr
-
-l=[1,2,3,4,5,6,7]
-t=4
-print(removeElements(l,t))
+            high = mid - 1
+        return low - 1
