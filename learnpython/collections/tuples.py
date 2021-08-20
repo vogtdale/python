@@ -1,4 +1,6 @@
 '''
+Tuple items are ordered, unchangeable, 
+and allow duplicate values.
 tuples are non mutable
 cannot remove nor append 
 if want to change an them must be redifined

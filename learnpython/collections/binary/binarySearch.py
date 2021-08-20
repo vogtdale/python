@@ -17,5 +17,5 @@ def find(arr, target):
 if __name__ == "__main__":
 
     arr = [1,2,3,4,5,6,7,8]
-    target = 9
+    target = 4
     print(find(arr, target))

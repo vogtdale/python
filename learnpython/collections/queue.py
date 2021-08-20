@@ -10,17 +10,42 @@ An queue can be implemented using python list where we can use the insert() and 
 Their is no insertion as data elements are always added at the end of the queue.
 '''
 
-data = []
+class Queue:
+    def __init__(self):
+        self.queue = []
 
-# Queue
-data.append(1)
-data.append(2)
-data.append(3)
+    def add(self, dataval):
+        if dataval not in self.queue:
+            self.queue.append(dataval)
+            return True
+         
+        return False
 
-print(data)
+    def remove(self):
+        if (len(self.queue) > 0):
+            return self.queue.pop(0)
+        return ("No element in the Queue")
 
-# Dequeue
-data.pop(0)  # First-in-First out method
-if not data:
-    data[0]
-print(data)
+    def peek(self):
+        return print(self.queue)
+
+
+        
+    def size(self):
+        return len(self.queue)  
+
+if __name__ == '__main__':
+    q = Queue()
+    q.add("Monday")
+    q.add("Tuesday")
+    q.add("Wednesday")
+
+    print("size queue", q.size())
+    print("Iniatial queue: ")
+    q.peek()
+
+    print("Element to remove", q.remove())
+    print("After deletion: ")
+    q.peek()
+
+    

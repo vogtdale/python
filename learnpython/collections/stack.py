@@ -6,19 +6,39 @@ So stack data structure allows operations at one end wich can be called top of t
 In a stack the element insreted last in sequence will come out first as we can remove only from the top of the stack. Such feature is known as Last in First Out(LIFO) feature. The operations of adding and removing the elements is known as PUSH and POP. In the following program we implement it as add and and remove functions. We dclare an empty list and use the append() and pop() methods to add and remove the data elements.
 '''
 
-book_shelf = []
+class Stack:
+    def __init__(self):
+        self.stack = []
+    
+    def add(self, dataval):
+        if dataval not in self.stack:
+            self.stack.append(dataval)
+            return True
 
-book_shelf.append("mobby dick")
-book_shelf.append("great expectations")
-book_shelf.append("anne frank")
+        else:
+            return False
 
-print(book_shelf)
+    def remove(self):
+        if (len(self.stack) <= 0):
+            return  ("No element in the Stack")
+        else:
+            self.stack.pop()
 
-# remove the last item 
-book_shelf.pop()
-if not book_shelf:
-    book_shelf[-1]
+    def peek(self):
+        return self.stack[-1]
 
-print("After removing book from stack:\n",book_shelf)
 
+
+if __name__ == "__main__":
+    s= Stack()
+    s.add("Monday")
+    s.add("Tuesday")
+    s.add("Wednesday")
+
+    print(s.peek())
+    temp = s.peek()
+    print(f"\nAfter deleting: {temp}", s.remove())
+    print(s.peek())
+    
+    
 

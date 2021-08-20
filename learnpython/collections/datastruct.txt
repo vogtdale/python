@@ -1,0 +1,23 @@
+What is a Data Structure?
+
+Organizing, managing and storing data is important as it enables easier access and efficient 
+modifications. Data Structures allows you to organize your data 
+in such a way that enables you to store collections of data, 
+relate them and perform operations on them accordingly. 
+
+
+Types of Data Structures in Python
+
+Python has implicit support for Data Structures which enable 
+you to store and access data. These structures are called 
+List, 
+Dictionary, 
+Tuple and 
+Set.
+
+Python allows its users to create their own Data Structures enabling them to have full control over their functionality. 
+The most prominent Data Structures are 
+Stack, 
+Queue, 
+Tree, 
+Linked List 
